@@ -1,65 +1,310 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none !important;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  list-style: none;
+  transition: all 0.5s;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  h1, h2, h3 {
-    font-family: 'Raleway', sans-serif;
-  }
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif !important;
+}
 
 #section-1 {
-    background-image: url('../images/Section 1/header-1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  background-image: url("../images/Section 1/header-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
 }
 
 .section1-overlay {
-    position: absolute;
-    background-color: black;
-    opacity: .4;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  background-color: black;
+  opacity: 0.4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-header {
-    position: fixed;
-    z-index: 1000;
+nav {
+  position: fixed;
+  z-index: 1000;
+  border-bottom: 1px solid #4a4645;
+  padding: 8px 0;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+  nav {
+    padding: 0px 100px;
+  }
 }
 
 .logo {
-    color: white;
-    font-size: 1.3rem;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .logo a {
-    background-color: #636361;
-    padding: 6px 10px;
+  background-color: #636361;
+  padding: 4px 10px;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.logo span {
+  letter-spacing: 2px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+nav ul {
+  height: 60px;
+}
+
+nav ul li {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 100%;
+}
+
+nav ul li span {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  padding: 1px 3px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+nav ul li:hover span {
+  background-color: white;
+  color: black;
+  opacity: 1;
+  padding: 1px 3px;
+}
+
+nav ul li:hover {
+  opacity: 1;
+}
+
+nav ul li:hover #desktop-menu {
+  display: flex;
+}
+
+#desktop-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #17191b;
+  border: none;
+}
+
+#desktop-menu a {
+  padding: 16px 24px;
+  width: 200px;
+  border-bottom: 1px solid rgba(73, 71, 71, 0.15);
+  color: white;
+  opacity: 0.7;
+}
+
+#desktop-menu a:hover {
+  background-color: black;
+  opacity: 1;
+}
+
+#hamburger {
+  border: 1px solid #433c3b;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+#hamburger-menu-content {
+  position: fixed;
+  top: 0;
+  padding-top: 55px;
+  z-index: 999;
+  display: flex;
+  width: 100%;
+  background-color: #17191b;
+  border-bottom: 1px solid #4a4645;
+  transition: all 1s !important;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#mobile-menu {
+  opacity: 0;
+  height: 0;
+}
+
+#mobile-menu a {
+  padding: 16px;
+  border-bottom: 1px solid rgba(73, 71, 71, 0.15);
+  color: white;
+  opacity: 0.7;
+  width: 100%;
+}
+
+#mobile-menu a:last-child {
+  border: none;
+}
+
+#mobile-menu a:hover {
+  background-color: black;
+  opacity: 1;
+}
+
+.nav-hamburger-active {
+  border-bottom: none;
+}
+
+.hamburger-menu-content-active {
+  height: 282px !important;
+  opacity: 1 !important;
+}
+.mobile-menu-active {
+  opacity: 1 !important;
+  transition: all 0.5s !important;
+}
+
+@media (min-width: 992px) {
+  #hamburger-menu-content,
+  #mobile-menu {
+    display: none;
+  }
+
+  nav {
+    background-color: transparent !important;
+    border-bottom: 1px solid #4a4645 !important;
+  }
+}
+
+.section-1-content {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section-1-text h1 {
+    font-weight: 100;
+    font-size: 3.5rem;
+    letter-spacing: .4rem;
+    white-space: nowrap;
+}
+
+.section-1-text p {
+    font-weight: 300;
+    opacity: .7;
+    letter-spacing: .1rem;
+    font-size: .9rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.section-1-btn button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
     border-radius: 2px;
+    font-size: .8rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.logo::before {
-    content: 'RE';
+.btn-slide {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
-.logo::after {
-    content: 'GN';
+.section-1-btn button:hover .btn-slide {
+    top: 0;
 }
+
+.section-1-btn button:hover {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .section-1-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .section-1-text p span {
+        display: block;
+    }
+}
+
+.section-1-chevron {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 45px;
+}
+
+/* Start Section 2 */
+.section-2-title h1 {
+  font-weight: 200;
+}
+
+.section-2-title span {
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+.section-2-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background-color: black;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-2-content p {
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+.section-2-content h5 {
+  font-weight: 300;
+}
+/* End Section 2 */
+
+/* Start Section 3 */
+#section-3 {
+  background-image: url("../images/Section 2");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+/* End Section 3 */
