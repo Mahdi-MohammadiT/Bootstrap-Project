@@ -19,6 +19,18 @@ h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif !important;
 }
 
+@media (max-width: 992px) {
+  .custom-container {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-container {
+    padding: 0 180px;
+  }
+}
+
 #section-1 {
   background-image: url("../images/Section 1/header-1.jpg");
   background-size: cover;
@@ -340,7 +352,50 @@ nav ul li:hover #desktop-menu {
 
 .watch-our-video {
   font-weight: 100;
+  line-height: 2.5rem;
 }
 
 /* End Section 3 */
 
+/* Start Section 4 */
+
+.section-4-items:hover svg {
+  opacity: 1 !important;
+  transition: .2s;
+}
+
+.section-4-text p {
+  font-size: .9rem;
+}
+
+.section-4-check {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #DADCDF;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+
+.section-4-check svg {
+  opacity: .5;
+}
+
+.section-4-custom-1 {
+  position: absolute;
+  right: -1px;
+  bottom: 0;
+  height: 36px;
+  transform: translateY(100%);
+}
+
+.section-4-custom-2 {
+  position: absolute;
+  right: -1px;
+  top: 0;
+  height: 36px;
+  transform: translateY(-100%);
+}
+/* End Section 4 */
