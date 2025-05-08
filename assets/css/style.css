@@ -421,3 +421,45 @@ nav ul li:hover #desktop-menu {
   border-left: 1px solid #DEE2E6;
 }
 /* End Section 4 */
+
+
+/* Start Section 5 */
+#section-5 {
+  background-image: url("../images/Section 5/fun-fact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  position: relative;
+  padding: 100px 0;
+  margin: 50px 0;
+}
+
+.section-5-title h1 {
+  font-weight: 200;
+}
+
+.section-5-title span {
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+.section-5-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-5-items {
+  z-index: 2;
+}
+
+.section-5-img img {
+  width: 56px;
+  height: 56px;
+}
