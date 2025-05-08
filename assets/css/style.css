@@ -11,6 +11,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -463,3 +464,28 @@ nav ul li:hover #desktop-menu {
   width: 56px;
   height: 56px;
 }
+
+/* End Section 5 */
+
+/* Start Section 6  */
+.section-6-items {
+  border: 1px solid #ffffff00;
+}
+.section-6-items:hover {
+  border: 1px solid #DEE2E6;
+}
+
+.section-6-items h4 {
+  letter-spacing: .2rem;
+}
+
+.section-6-items p {
+  opacity: .6;
+  font-size: .9rem;
+}
+
+.section-6-item-img {
+  width: 56px;
+  height: 56px;
+}
+/* Start Section 6  */
