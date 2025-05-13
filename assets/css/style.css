@@ -717,4 +717,49 @@ nav ul li:hover #desktop-menu {
 }
 /* End Section 8 */
 
-/* Start */
+/* Start Section 9 */
+#section-9 {
+  background-image: url("../images/Section 9/fun-fact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  position: relative;
+  padding: 80px 0;
+  margin: 50px 0;
+}
+
+.section9-overlay {
+  position: absolute;
+  background-color: black;
+  opacity: 0.7;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sec9-item {
+  z-index: 3;
+}
+
+.our-latest-work button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.our-latest-work button:hover .btn-slide {
+  top: 0;
+}
+
+.our-latest-work button:hover {
+  color: black;
+}
+
+
+/* End Section 9 */
