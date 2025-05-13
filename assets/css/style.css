@@ -812,4 +812,30 @@ nav ul li:hover #desktop-menu {
 }
 
 
-/* Start Section 10 */
+/* End Section 10 */
+
+/* Start Section 11 */
+.sec11-text p {
+  font-size: .9rem;
+   opacity: .8;
+}
+
+.more-works button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.more-works button:hover .btn-slide {
+  top: 0;
+}
+
+.more-works button:hover {
+  color: black !important;
+}
+/* End Section 11 */
