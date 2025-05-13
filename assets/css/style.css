@@ -10,8 +10,8 @@
 }
 
 ::selection {
-  background-color: #DC3545;
-  color: #fff;             
+  background-color: #dc3545;
+  color: #fff;
 }
 
 body {
@@ -790,7 +790,7 @@ nav ul li:hover #desktop-menu {
 }
 
 .sec9-overlay-item {
-  opacity: .85;
+  opacity: 0.85;
   background-color: black;
   transform: translateY(-100%);
   cursor: pointer;
@@ -804,20 +804,19 @@ nav ul li:hover #desktop-menu {
 }
 
 .overlay {
-  opacity: .85;
+  opacity: 0.85;
 }
 
 .sec9-overlay-item p {
   font-size: 0.9rem;
 }
 
-
 /* End Section 10 */
 
 /* Start Section 11 */
 .sec11-text p {
-  font-size: .9rem;
-   opacity: .8;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 .more-works button {
@@ -839,3 +838,53 @@ nav ul li:hover #desktop-menu {
   color: black !important;
 }
 /* End Section 11 */
+
+/* Start Section 12 */
+.person-name {
+  color: #17191b;
+  font-size: 0.9rem;
+}
+
+.person-name:hover {
+  color: #17191b;
+  text-decoration: underline !important;
+}
+
+.person-skills {
+  color: #17191b;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.person-overlay {
+  opacity: 0;
+  transition: all .5s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #111;
+}
+
+.person-skill-logo {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.person-cont:hover .person-overlay {
+  opacity: 0.65;
+}
+
+.person-cont:hover .person-skill-logo {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+/* End Section 12 */
