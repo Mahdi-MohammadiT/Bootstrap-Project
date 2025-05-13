@@ -74,3 +74,89 @@ chevronButton.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+
+// Section 10
+
+// document.querySelectorAll('.project-items').forEach(item => {
+//   item.addEventListener('mouseenter', function() {
+//     // 'this' به آیتمی اشاره دارد که ماوس روی آن قرار گرفته است
+//     const overlay = this.querySelector('.sec9-overlay-item');
+//     if (overlay) {
+//       overlay.style.transform = 'translateY(0%)';
+//     }
+//   });
+
+//   item.addEventListener('mouseleave', function() {
+//     // 'this' به آیتمی اشاره دارد که ماوس از روی آن کنار رفته است
+//     const overlay = this.querySelector('.sec9-overlay-item');
+//     if (overlay) {
+//       overlay.style.transform = 'translateY(-100%)'; // یا به حالت اولیه برگردانید
+//     }
+//   });
+// });
+
+
+function getHoverDirection(event, element) {
+  const rect = element.getBoundingClientRect();
+  const offsetX = event.clientX - rect.left; 
+  const offsetY = event.clientY - rect.top;
+  const width = element.offsetWidth;
+  const height = element.offsetHeight;
+
+  const x = (offsetX - width / 2) * (width > height ? height / width : 1);
+  const y = (offsetY - height / 2) * (height > width ? width / height : 1);
+
+  const degrees = Math.atan2(y, x) * (180 / Math.PI);
+
+  const directionIndex = Math.round(((degrees + 180) / 90) + 3) % 4;
+
+  switch (directionIndex) {
+      case 0: return 'top';  
+      case 1: return 'right';
+      case 2: return 'bottom';
+      case 3: return 'left';
+  }
+}
+
+document.querySelectorAll('.project-items').forEach(item => {
+  const overlay = item.querySelector('.sec9-overlay-item');
+
+  item.addEventListener('mouseenter', function(e) {
+      const direction = getHoverDirection(e, this);
+
+      overlay.style.transition = 'none';
+      
+      overlay.style.opacity = '.85';
+      if (direction === 'top') {
+          overlay.style.transform = 'translateY(-100%) translateX(0)';
+      } else if (direction === 'right') {
+          overlay.style.transform = 'translateX(100%) translateY(0)';
+      } else if (direction === 'bottom') {
+          overlay.style.transform = 'translateY(100%) translateX(0)';
+      } else if (direction === 'left') {
+          overlay.style.transform = 'translateX(-100%) translateY(0)';
+      }
+
+      void overlay.offsetWidth;
+
+      overlay.style.transition = 'transform 0.2s ease-out, opacity 0.2s ease-out';
+      overlay.style.opacity = '.85';
+      overlay.style.transform = 'translateY(0) translateX(0)';
+  });
+
+  item.addEventListener('mouseleave', function(e) {
+      const direction = getHoverDirection(e, this); 
+
+      overlay.style.opacity = '.85';
+      if (direction === 'top') {
+          overlay.style.transform = 'translateY(-100%) translateX(0)';
+      } else if (direction === 'right') {
+          overlay.style.transform = 'translateX(100%) translateY(0)';
+      } else if (direction === 'bottom') {
+          overlay.style.transform = 'translateY(100%) translateX(0)';
+      } else if (direction === 'left') {
+          overlay.style.transform = 'translateX(-100%) translateY(0)';
+      }
+  });
+});

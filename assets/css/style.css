@@ -9,6 +9,11 @@
   transition: all 0.5s;
 }
 
+::selection {
+  background-color: #DC3545;
+  color: #fff;             
+}
+
 body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
@@ -770,3 +775,41 @@ nav ul li:hover #desktop-menu {
 }
 
 /* End Section 9 */
+
+/* Start Section 10 */
+.recent-projects-btn button {
+  border: 1px solid transparent;
+  background-color: white;
+  color: #17191b;
+  font-size: 0.8rem;
+}
+
+.sec9-btn-active {
+  border: 1px solid #17191b !important;
+  border-radius: 4px;
+}
+
+.sec9-overlay-item {
+  opacity: .85;
+  background-color: black;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+
+.sec9-overlay-item h4,
+.sec9-overlay-item p {
+  z-index: 3;
+  color: #fff;
+  opacity: 1 !important;
+}
+
+.overlay {
+  opacity: .85;
+}
+
+.sec9-overlay-item p {
+  font-size: 0.9rem;
+}
+
+
+/* Start Section 10 */
