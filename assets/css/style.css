@@ -16,7 +16,10 @@ body {
 
 h1,
 h2,
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif !important;
 }
 
@@ -57,7 +60,6 @@ h3, h4, h5, h6 {
   bottom: 0;
   left: 0;
 }
-
 
 nav {
   position: fixed;
@@ -219,72 +221,72 @@ nav ul li:hover #desktop-menu {
 }
 
 .section-1-content {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .section-1-text h1 {
-    font-weight: 100;
-    font-size: 3.5rem;
-    letter-spacing: .4rem;
-    white-space: nowrap;
+  font-weight: 100;
+  font-size: 3.5rem;
+  letter-spacing: 0.4rem;
+  white-space: nowrap;
 }
 
 .section-1-text p {
-    font-weight: 300;
-    opacity: .7;
-    letter-spacing: .1rem;
-    font-size: .9rem;
-    text-align: center;
-    line-height: 1.5rem;
+  font-weight: 300;
+  opacity: 0.7;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.5rem;
 }
 
 .section-1-btn button {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 2px;
-    font-size: .8rem;
-    position: relative;
-    overflow: hidden;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-slide {
-    background-color: white;
-    position: absolute;
-    left: 0;
-    top: -100%;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .section-1-btn button:hover .btn-slide {
-    top: 0;
+  top: 0;
 }
 
 .section-1-btn button:hover {
-    color: black;
+  color: black;
 }
 
 @media (max-width: 768px) {
-    .section-1-text h1 {
-        font-size: 2.3rem;
-    }
+  .section-1-text h1 {
+    font-size: 2.3rem;
+  }
 
-    .section-1-text p span {
-        display: block;
-    }
+  .section-1-text p span {
+    display: block;
+  }
 }
 
 .section-1-chevron {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 45px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 45px;
 }
 
 /* Start Section 2 */
@@ -294,11 +296,11 @@ nav ul li:hover #desktop-menu {
 
 .section-2-title span {
   font-weight: 300;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .section-2-title::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 80px;
   height: 1px;
@@ -309,7 +311,7 @@ nav ul li:hover #desktop-menu {
 }
 
 .section-2-content p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 300;
 }
 
@@ -368,29 +370,29 @@ nav ul li:hover #desktop-menu {
 
 @media (min-width: 992px) {
   .section-4-text-custom-1 {
-    border-top: 1px solid #DEE2E6;
-    border-right: 1px solid #DEE2E6;
+    border-top: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
   }
 
   .section-4-custom-text-2 {
-    border-bottom: 1px solid #DEE2E6;
-    border-right: 1px solid #DEE2E6;
+    border-bottom: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
   }
 }
 
 .section-4-items:hover svg {
   opacity: 1 !important;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .section-4-text p {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .section-4-check {
   width: 36px;
   height: 36px;
-  border: 1px solid #DADCDF;
+  border: 1px solid #dadcdf;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -399,7 +401,7 @@ nav ul li:hover #desktop-menu {
 }
 
 .section-4-check svg {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .section-4-custom-1 {
@@ -408,8 +410,8 @@ nav ul li:hover #desktop-menu {
   bottom: 0;
   height: 36px;
   transform: translateY(100%);
-  border-top: 1px solid #DEE2E6;
-  border-left: 1px solid #DEE2E6;
+  border-top: 1px solid #dee2e6;
+  border-left: 1px solid #dee2e6;
 }
 
 .section-4-custom-2 {
@@ -418,11 +420,10 @@ nav ul li:hover #desktop-menu {
   top: 0;
   height: 36px;
   transform: translateY(-100%);
-  border-bottom: 1px solid #DEE2E6;
-  border-left: 1px solid #DEE2E6;
+  border-bottom: 1px solid #dee2e6;
+  border-left: 1px solid #dee2e6;
 }
 /* End Section 4 */
-
 
 /* Start Section 5 */
 #section-5 {
@@ -442,11 +443,11 @@ nav ul li:hover #desktop-menu {
 
 .section-5-title span {
   font-weight: 300;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .section-5-title::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 80px;
   height: 1px;
@@ -472,20 +473,170 @@ nav ul li:hover #desktop-menu {
   border: 1px solid #ffffff00;
 }
 .section-6-items:hover {
-  border: 1px solid #DEE2E6;
+  border: 1px solid #dee2e6;
 }
 
 .section-6-items h4 {
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
 .section-6-items p {
-  opacity: .6;
-  font-size: .9rem;
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 
 .section-6-item-img {
   width: 56px;
   height: 56px;
 }
-/* Start Section 6  */
+/* End Section 6  */
+
+/* Start Section 7 */
+#section-7 {
+  background-image: url("../images/Section 7/performance-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  position: relative;
+  padding: 50px 0;
+  margin: 50px 0;
+}
+
+.section-7-title h1 {
+  font-weight: 200;
+}
+
+.section-7-title span {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.section-7-title::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-7-items {
+  z-index: 2;
+}
+
+.percentage-bar {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 4px;
+  border-radius: 50px;
+}
+
+.bar1::after {
+  width: 90%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  color: #fff;
+  background-color: #fff;
+}
+
+.bar2::after {
+  width: 73%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  color: #fff;
+  background-color: #fff;
+}
+
+.bar3::after {
+  width: 87%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  color: #fff;
+  background-color: #fff;
+}
+
+.bar4::after {
+  width: 95%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  color: #fff;
+  background-color: #fff;
+}
+
+.our-service .line {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 4px;
+  border-radius: 50px;
+  margin-top: 7px;
+}
+
+#section-7 img {
+  width: 56px;
+  height: 56px;
+}
+
+#section-7 button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-slide {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#section-7 button:hover .btn-slide {
+  top: 0;
+}
+
+#section-7 button:hover {
+  color: black;
+}
+
+.our-service-p {
+  font-size: .9rem;
+}
+
+/* .ui-ux {
+  position: relative;
+}
+
+.ui-ux::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  color: #fff;
+  height: 4px;
+  width: 100%;
+  border-radius: 50px;
+  top: 29px;
+} */
+
+/* End Section 7 */
