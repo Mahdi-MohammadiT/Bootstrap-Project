@@ -16,3 +16,68 @@ hamburgerMenu.addEventListener("click", () => {
   }, 600);
 });
 
+// Scroll Trigger Section 1
+
+const navbar = document.querySelector("nav");
+const overlay = document.querySelector(".section1-overlay");
+
+if (navbar && overlay) {
+  const endTransitionScrollY = window.innerHeight * 0.6; // 60vh
+
+  const navTargetRed = 0;
+  const navTargetGreen = 0;
+  const navTargetBlue = 0;
+  const navTargetAlpha = 1;
+
+  const overlayInitialOpacityAt0vh = 0.4;
+  const overlayFinalTargetOpacityAt60vh = 1; // overlay به شفافیت 0.8 می‌رسد
+
+  window.addEventListener("scroll", function () {
+    const currentScrollY = window.pageYOffset;
+    let scrollProgress = 0;
+
+    if (currentScrollY <= 0) {
+      scrollProgress = 0;
+    } else if (currentScrollY < endTransitionScrollY) {
+      scrollProgress = currentScrollY / endTransitionScrollY;
+    } else {
+      scrollProgress = 1;
+    }
+
+    // Navbar background
+    let navNewAlpha = scrollProgress * navTargetAlpha;
+    navNewAlpha = Math.min(navNewAlpha, navTargetAlpha);
+    navbar.style.backgroundColor = `rgba(${navTargetRed}, ${navTargetGreen}, ${navTargetBlue}, ${navNewAlpha})`;
+
+    // Overlay opacity
+    let overlayNewOpacity;
+    if (scrollProgress <= 0) {
+      overlayNewOpacity = overlayInitialOpacityAt0vh;
+    } else if (scrollProgress >= 1) {
+      overlayNewOpacity = overlayFinalTargetOpacityAt60vh;
+    } else {
+      overlayNewOpacity =
+        overlayInitialOpacityAt0vh +
+        scrollProgress *
+          (overlayFinalTargetOpacityAt60vh - overlayInitialOpacityAt0vh);
+    }
+    overlayNewOpacity = Math.max(0, Math.min(1, overlayNewOpacity));
+    overlay.style.opacity = overlayNewOpacity.toFixed(2);
+  });
+}
+
+const chevronButton = document.querySelector(".section-1-chevron");
+
+if (chevronButton) {
+  chevronButton.addEventListener("click", function () {
+    // محاسبه موقعیت هدف: 90% ارتفاع پنجره مرورگر از بالای صفحه
+    const targetScrollY = window.innerHeight * 0.95; // 90vh
+
+    window.scrollTo({
+      top: targetScrollY,
+      behavior: "smooth",
+    });
+  });
+} else {
+  console.warn("Chevron button (.section-1-chevron) not found.");
+}

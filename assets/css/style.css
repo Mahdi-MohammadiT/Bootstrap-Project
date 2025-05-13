@@ -67,6 +67,12 @@ nav {
   border-bottom: 1px solid #4a4645;
   padding: 8px 0;
   font-weight: 400;
+
+  background-color: transparent;
+}
+
+nav.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 1) !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -215,8 +221,8 @@ nav ul li:hover #desktop-menu {
   }
 
   nav {
-    background-color: transparent !important;
-    border-bottom: 1px solid #4a4645 !important;
+    background-color: transparent;
+    border-bottom: 1px solid #4a4645;
   }
 }
 
@@ -287,6 +293,7 @@ nav ul li:hover #desktop-menu {
   left: 50%;
   transform: translateX(-50%);
   bottom: 45px;
+  cursor: pointer;
 }
 
 /* Start Section 2 */
@@ -620,7 +627,7 @@ nav ul li:hover #desktop-menu {
 }
 
 .our-service-p {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 /* .ui-ux {
@@ -643,21 +650,21 @@ nav ul li:hover #desktop-menu {
 
 /* Start Section 8 */
 .sec8-item-title {
-  border-left: 1px dashed #9BA0A7;
-  border-bottom: 1px dashed #9BA0A7;
+  border-left: 1px dashed #9ba0a7;
+  border-bottom: 1px dashed #9ba0a7;
 }
 
 .sec8-item-title h5 {
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
 .sec8-item-title p {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .sec8-circular-img {
   background-color: #fff;
-  border: 1px dashed #9BA0A7;
+  border: 1px dashed #9ba0a7;
   border-radius: 50px;
   width: 88px;
   height: 88px;
@@ -676,7 +683,7 @@ nav ul li:hover #desktop-menu {
 }
 
 .sec8-variant2 {
-  border-right: 1px dashed #9BA0A7;
+  border-right: 1px dashed #9ba0a7;
   border-left: 0;
 }
 
@@ -685,7 +692,8 @@ nav ul li:hover #desktop-menu {
   border-right: 0;
 }
 
-.sec8-variant2 h5, .sec8-variant1 h5 {
+.sec8-variant2 h5,
+.sec8-variant1 h5 {
   transform: translateY(-50%);
 }
 
@@ -701,7 +709,7 @@ nav ul li:hover #desktop-menu {
   }
 
   .sec8-variant2 {
-    border-left: 1px dashed #9BA0A7;
+    border-left: 1px dashed #9ba0a7;
     border-right: 0;
   }
 
@@ -760,6 +768,5 @@ nav ul li:hover #desktop-menu {
 .our-latest-work button:hover {
   color: black;
 }
-
 
 /* End Section 9 */
