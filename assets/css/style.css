@@ -888,3 +888,14 @@ nav ul li:hover #desktop-menu {
 }
 
 /* End Section 12 */
+
+
+/* Start Footer */
+footer {
+  background-color: #17191B;
+}
+
+.footer-content {
+  font-size: .9rem;
+}
+/* End Footer */
