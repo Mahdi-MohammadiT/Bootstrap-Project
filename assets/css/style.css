@@ -1020,6 +1020,24 @@ nav ul li:hover #desktop-menu {
     border-left: 0;
   }
 }
+
+#section-8 .section-2-title,
+#section-8 .section-2-title h1,
+#section-8 .section-2-title span,
+#section-8 .sec8-item-title p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+#section-8 .section-2-title.reveal,
+#section-8 .section-2-title h1.reveal,
+#section-8 .section-2-title span.reveal,
+#section-8 .sec8-item-title p.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* End Section 8 */
 
 /* Start Section 9 */

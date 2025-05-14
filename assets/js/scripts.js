@@ -445,3 +445,42 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Section 9 Animation
+document.addEventListener('DOMContentLoaded', () => {
+  const titleSection = document.querySelector('#section-8 .section-2-title');
+  const title = document.querySelector('#section-8 .section-2-title h1');
+  const subtitle = document.querySelector('#section-8 .section-2-title span');
+  const items = document.querySelectorAll('#section-8 .sec8-item-title');
+
+  // ایجاد IntersectionObserver
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // انیمیشن برای عنوان و زیرعنوان
+          setTimeout(() => {
+            titleSection.classList.add('reveal');
+            title.classList.add('reveal');
+            subtitle.classList.add('reveal');
+          }, 100);
+
+          // انیمیشن فقط برای p با تأخیر تدریجی
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              item.querySelector('p').classList.add('reveal');
+            }, 300 + index * 200); // تأخیر 300ms + 200ms برای هر آیتم
+          });
+
+          // متوقف کردن مشاهده پس از اجرا
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5 // اجرا وقتی 20٪ از سکشن قابل مشاهده باشد
+    }
+  );
+
+  // مشاهده سکشن
+  observer.observe(document.querySelector('#section-8'));
+});
