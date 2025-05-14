@@ -179,7 +179,6 @@ window.addEventListener('load', () => {
 });
 
 // Section 2 Animation 
-
 document.addEventListener('DOMContentLoaded', () => {
   const titleSection = document.querySelector('.section-2-title');
   const title = document.querySelector('.section-2-title h1');
@@ -210,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 // Section 3 Animation 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -234,10 +234,48 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     },
     {
-      threshold: 0.2 // اجرا وقتی 10٪ از سکشن قابل مشاهده باشد
+      threshold: 0.5 // اجرا وقتی 10٪ از سکشن قابل مشاهده باشد
     }
   );
 
   // مشاهده سکشن
   observer.observe(document.querySelector('#section-3'));
 });
+
+// Section 4 Animation
+const titleSection = document.querySelector('#section-4 .section-2-title');
+const title = document.querySelector('#section-4 .section-2-title h1');
+const subtitle = document.querySelector('#section-4 .section-2-title span');
+const items = document.querySelectorAll('#section-4 .section-4-items');
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // وقتی سکشن در ویوپورت قرار گرفت
+        setTimeout(() => {
+          titleSection.classList.add('reveal');
+          title.classList.add('reveal');
+          subtitle.classList.add('reveal');
+        }, 100);
+
+        // انیمیشن برای آیتم‌ها با تأخیر تدریجی
+        items.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('reveal');
+          }, 300 + index * 200); // تأخیر 300ms + 200ms برای هر آیتم
+        });
+
+        // متوقف کردن مشاهده پس از اجرای انیمیشن
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.2 // اجرا وقتی 20٪ از سکشن قابل مشاهده باشد
+  }
+);
+
+observer.observe(document.querySelector('#section-4'));
+
+// Section 5 Animation

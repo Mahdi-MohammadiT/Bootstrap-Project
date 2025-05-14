@@ -522,6 +522,23 @@ nav ul li:hover #desktop-menu {
   border-bottom: 1px solid #dee2e6;
   border-left: 1px solid #dee2e6;
 }
+
+#section-4 .section-2-title, 
+#section-4 .section-2-title h1, 
+#section-4 .section-2-title span,
+#section-4 .section-4-items {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+#section-4 .section-2-title.reveal, 
+#section-4 .section-2-title h1.reveal, 
+#section-4 .section-2-title span.reveal,
+#section-4 .section-4-items.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* End Section 4 */
 
 /* Start Section 5 */
