@@ -582,6 +582,21 @@ nav ul li:hover #desktop-menu {
   height: 56px;
 }
 
+#section-5 .section-5-title,
+#section-5 .section-5-title h1,
+#section-5 .section-5-title span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+#section-5 .section-5-title.reveal,
+#section-5 .section-5-title h1.reveal,
+#section-5 .section-5-title span.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* End Section 5 */
 
 /* Start Section 6  */
@@ -604,6 +619,36 @@ nav ul li:hover #desktop-menu {
 .section-6-item-img {
   width: 56px;
   height: 56px;
+}
+
+#section-6 .section-2-title,
+#section-6 .section-2-title h1,
+#section-6 .section-2-title span,
+#section-6 .section-6-items {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#section-6 .section-2-title,
+#section-6 .section-2-title h1,
+#section-6 .section-2-title span {
+  transform: translateY(20px);
+}
+
+#section-6 .section-6-items {
+  transform: translateY(30px) scale(0.9); /* شروع با مقیاس کوچکتر */
+}
+
+#section-6 .section-2-title.reveal,
+#section-6 .section-2-title h1.reveal,
+#section-6 .section-2-title span.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#section-6 .section-6-items.reveal-item {
+  opacity: 1;
+  transform: translateY(0) scale(1); /* بازگشت به مقیاس اصلی */
 }
 /* End Section 6  */
 

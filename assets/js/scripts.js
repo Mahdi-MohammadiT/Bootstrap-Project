@@ -279,3 +279,101 @@ const observer = new IntersectionObserver(
 observer.observe(document.querySelector('#section-4'));
 
 // Section 5 Animation
+document.addEventListener('DOMContentLoaded', () => {
+  const titleSection = document.querySelector('#section-5 .section-5-title');
+  const title = document.querySelector('#section-5 .section-5-title h1');
+  const subtitle = document.querySelector('#section-5 .section-5-title span');
+  const numberElements = document.querySelectorAll('#section-5 .section-5-items p');
+
+  // تابع شمارش اعداد
+  const animateNumbers = (element, target, duration) => {
+    let start = 0;
+    const startTime = performance.now();
+
+    const updateNumber = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1); // محدود به 0 تا 1
+      const currentValue = Math.floor(progress * target);
+
+      element.textContent = currentValue.toLocaleString(); // فرمت با کاما
+
+      if (progress < 1) {
+        requestAnimationFrame(updateNumber);
+      } else {
+        element.textContent = target.toLocaleString(); // اطمینان از مقدار نهایی
+      }
+    };
+    requestAnimationFrame(updateNumber);
+  };
+
+  // ایجاد IntersectionObserver
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // انیمیشن برای عنوان و زیرعنوان
+          setTimeout(() => {
+            titleSection.classList.add('reveal');
+            title.classList.add('reveal');
+            subtitle.classList.add('reveal');
+          }, 100);
+
+          // انیمیشن شمارش اعداد
+          numberElements.forEach(element => {
+            const target = parseInt(element.textContent.replace(/,/g, '')); // حذف کاما و تبدیل به عدد
+            animateNumbers(element, target, 5000); // 5 ثانیه برای شمارش
+          });
+
+          // متوقف کردن مشاهده پس از اجرا
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2 // اجرا وقتی 20٪ از سکشن قابل مشاهده باشد
+    }
+  );
+
+  // مشاهده سکشن
+  observer.observe(document.querySelector('#section-5'));
+});
+
+// Section 6 Animation
+document.addEventListener('DOMContentLoaded', () => {
+  const titleSection = document.querySelector('#section-6 .section-2-title');
+  const title = document.querySelector('#section-6 .section-2-title h1');
+  const subtitle = document.querySelector('#section-6 .section-2-title span');
+  const items = document.querySelectorAll('#section-6 .section-6-items');
+
+  // ایجاد IntersectionObserver
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // انیمیشن برای عنوان و زیرعنوان
+          setTimeout(() => {
+            titleSection.classList.add('reveal');
+            title.classList.add('reveal');
+            subtitle.classList.add('reveal');
+          }, 100);
+
+          // انیمیشن برای آیتم‌ها با تأخیر تدریجی
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add('reveal-item');
+            }, 300 + index * 150); // تأخیر 300ms + 150ms برای هر آیتم
+          });
+
+          // متوقف کردن مشاهده پس از اجرا
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2 // اجرا وقتی 20٪ از سکشن قابل مشاهده باشد
+    }
+  );
+
+  // مشاهده سکشن
+  observer.observe(document.querySelector('#section-6'));
+});
