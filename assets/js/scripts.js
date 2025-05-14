@@ -377,3 +377,71 @@ document.addEventListener('DOMContentLoaded', () => {
   // مشاهده سکشن
   observer.observe(document.querySelector('#section-6'));
 });
+
+// Section 7 Animation
+document.addEventListener('DOMContentLoaded', () => {
+  const titleSection = document.querySelector('#section-7 .section-7-title');
+  const title = document.querySelector('#section-7 .section-7-title h1');
+  const subtitle = document.querySelector('#section-7 .section-7-title span');
+  const percentageItems = document.querySelectorAll('#section-7 .section-7-items .d-flex.justify-content-between');
+
+  // تابع انیمیشن شمارش درصد و پر شدن نووار
+  const animatePercentage = (percentageElement, barElement, target, duration) => {
+    let start = 0;
+    const startTime = performance.now();
+
+    const updatePercentage = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1); // محدود به 0 تا 1
+      const currentValue = Math.floor(progress * target);
+
+      percentageElement.textContent = `${currentValue}%`;
+      barElement.style.width = `${currentValue}%`; // پر شدن نوار
+
+      if (progress < 1) {
+        requestAnimationFrame(updatePercentage);
+      } else {
+        percentageElement.textContent = `${target}%`; // اطمینان از مقدار نهایی
+        barElement.style.width = `${target}%`;
+      }
+    };
+    requestAnimationFrame(updatePercentage);
+  };
+
+  // ایجاد IntersectionObserver
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // انیمیشن برای عنوان و زیرعنوان
+          setTimeout(() => {
+            titleSection.classList.add('reveal');
+            title.classList.add('reveal');
+            subtitle.classList.add('reveal');
+          }, 100);
+
+          // انیمیشن برای درصد‌ها و نوارها
+          percentageItems.forEach(item => {
+            const percentageElement = item.querySelector('.fw-light:last-child');
+            const barElement = item.nextElementSibling.querySelector('.progress-fill');
+            const target = parseInt(percentageElement.textContent.replace('%', '')); // حذف % و تبدیل به عدد
+            if (!isNaN(target)) {
+              animatePercentage(percentageElement, barElement, target, 2500); // 2.5 ثانیه
+            }
+          });
+
+          // متوقف کردن مشاهده پس از اجرا
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2 // اجرا وقتی 20٪ از سکشن قابل مشاهده باشد
+    }
+  );
+
+  // مشاهده سکشن
+  observer.observe(document.querySelector('#section-7'));
+});
+
+

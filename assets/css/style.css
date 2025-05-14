@@ -688,7 +688,7 @@ nav ul li:hover #desktop-menu {
   z-index: 2;
 }
 
-.percentage-bar {
+/* .percentage-bar {
   position: relative;
   background-color: rgba(255, 255, 255, 0.3);
   width: 100%;
@@ -738,7 +738,7 @@ nav ul li:hover #desktop-menu {
   height: 100%;
   color: #fff;
   background-color: #fff;
-}
+} */
 
 .our-service .line {
   background-color: rgba(255, 255, 255, 0.3);
@@ -799,6 +799,149 @@ nav ul li:hover #desktop-menu {
   border-radius: 50px;
   top: 29px;
 } */
+
+#section-7 .section-7-title,
+#section-7 .section-7-title h1,
+#section-7 .section-7-title span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+#section-7 .section-7-title.reveal,
+#section-7 .section-7-title h1.reveal,
+#section-7 .section-7-title span.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.percentage-bar {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 4px;
+  border-radius: 50px;
+}
+
+.progress-fill {
+  width: 0; /* شروع با عرض صفر */
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50px;
+  transition: width 2.5s ease; /* انیمیشن برای پر شدن نوار */
+}
+
+/*  */
+
+#section-7 .section-7-title,
+#section-7 .section-7-title h1,
+#section-7 .section-7-title span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+#section-7 .section-7-title.reveal,
+#section-7 .section-7-title h1.reveal,
+#section-7 .section-7-title span.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.percentage-bar {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 4px;
+  border-radius: 50px;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50px;
+  transition: width 2.5s ease;
+}
+
+.our-service .line {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 4px;
+  border-radius: 50px;
+  margin-top: 7px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tab {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tab.active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.tab-content .our-service-p {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab-content .our-service-p.active {
+  display: block;
+  opacity: 1;
+}
+
+.tab-images .tab-image {
+  display: none;
+}
+
+.tab-images .tab-image.active {
+  display: block;
+}
+
+#section-7 img {
+  width: 56px;
+  height: 56px;
+}
+
+#section-7 button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-slide {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#section-7 button:hover .btn-slide {
+  top: 0;
+}
+
+#section-7 button:hover {
+  color: black;
+}
+
+.our-service-p {
+  font-size: 0.9rem;
+}
 
 /* End Section 7 */
 
