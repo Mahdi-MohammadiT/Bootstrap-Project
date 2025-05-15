@@ -16,7 +16,7 @@
 }
 
 body {
-  /* font-family: "Roboto", sans-serif; */
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
 
@@ -361,28 +361,25 @@ nav ul li:hover #desktop-menu {
 
 .section-2-title h1,
 .section-2-title span {
-  opacity: 0; /* ابتدا مخفی */
-  transform: translateY(50px); /* ابتدا 50px پایین‌تر */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* ترنزیشن نرم */
-  display: inline-block; /* برای انیمیشن درست */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  display: inline-block;
 }
 
-/* کلاس برای فعال کردن انیمیشن */
 .section-2-title h1.reveal,
 .section-2-title span.reveal {
-  opacity: 1; /* مرئی */
-  transform: translateY(0); /* به موقعیت اصلی */
+  opacity: 1; 
+  transform: translateY(0);
 }
 
 .section-2-title.reveal::after {
   opacity: 1; /* مرئی */
-  transform: translateX(-50%) translateY(0); /* به موقعیت اصلی */
+  transform: translateX(-50%) translateY(0)
 }
 
-
-/* تأخیر برای پله‌پله شدن */
 .section-2-title span.reveal {
-  transition-delay: 0.2s; /* 0.2 ثانیه تأخیر برای span */
+  transition-delay: 0.2s; 
 }
 
 /* End Section 2 */
@@ -636,7 +633,7 @@ nav ul li:hover #desktop-menu {
 }
 
 #section-6 .section-6-items {
-  transform: translateY(30px) scale(0.9); /* شروع با مقیاس کوچکتر */
+  transform: translateY(30px) scale(0.9);
 }
 
 #section-6 .section-2-title.reveal,
@@ -648,7 +645,7 @@ nav ul li:hover #desktop-menu {
 
 #section-6 .section-6-items.reveal-item {
   opacity: 1;
-  transform: translateY(0) scale(1); /* بازگشت به مقیاس اصلی */
+  transform: translateY(0) scale(1);
 }
 /* End Section 6  */
 
@@ -687,58 +684,6 @@ nav ul li:hover #desktop-menu {
 .section-7-items {
   z-index: 2;
 }
-
-/* .percentage-bar {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.3);
-  width: 100%;
-  height: 4px;
-  border-radius: 50px;
-}
-
-.bar1::after {
-  width: 90%;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  color: #fff;
-  background-color: #fff;
-}
-
-.bar2::after {
-  width: 73%;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  color: #fff;
-  background-color: #fff;
-}
-
-.bar3::after {
-  width: 87%;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  color: #fff;
-  background-color: #fff;
-}
-
-.bar4::after {
-  width: 95%;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  color: #fff;
-  background-color: #fff;
-} */
 
 .our-service .line {
   background-color: rgba(255, 255, 255, 0.3);
@@ -784,22 +729,6 @@ nav ul li:hover #desktop-menu {
   font-size: 0.9rem;
 }
 
-/* .ui-ux {
-  position: relative;
-}
-
-.ui-ux::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  background-color: #fff;
-  color: #fff;
-  height: 4px;
-  width: 100%;
-  border-radius: 50px;
-  top: 29px;
-} */
-
 #section-7 .section-7-title,
 #section-7 .section-7-title h1,
 #section-7 .section-7-title span {
@@ -824,11 +753,11 @@ nav ul li:hover #desktop-menu {
 }
 
 .progress-fill {
-  width: 0; /* شروع با عرض صفر */
+  width: 0;
   height: 100%;
   background-color: #fff;
   border-radius: 50px;
-  transition: width 2.5s ease; /* انیمیشن برای پر شدن نوار */
+  transition: width 2.5s ease;
 }
 
 /*  */
@@ -1165,7 +1094,7 @@ nav ul li:hover #desktop-menu {
 #section-11 .sec11-text p,
 #section-11 .more-works button {
   opacity: 0;
-  transform: translateY(20px); /* حرکت از پایین به بالا */
+  transform: translateY(20px);
   transition: all 0.5s ease;
 }
 
@@ -1202,59 +1131,13 @@ nav ul li:hover #desktop-menu {
 /* End Section 11 */
 
 /* Start Section 12 */
-/* .person-name {
-  color: #17191b;
-  font-size: 0.9rem;
-}
-
-.person-name:hover {
-  color: #17191b;
-  text-decoration: underline !important;
-}
-
-.person-skills {
-  color: #17191b;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.person-overlay {
-  opacity: 0;
-  transition: all 0.5s;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #111;
-}
-
-.person-skill-logo {
-  position: absolute;
-  bottom: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-}
-
-.person-cont:hover .person-overlay {
-  opacity: 0.65;
-}
-
-.person-cont:hover .person-skill-logo {
-  position: absolute;
-  bottom: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 1;
-} */
 
 #section-12 .section-2-title,
 #section-12 .section-2-title h1,
 #section-12 .section-2-title span,
 #section-12 .col-6.col-md-3 {
   opacity: 0;
-  transform: translateY(20px); /* حرکت از پایین به بالا */
+  transform: translateY(20px);
   transition: all 0.5s ease;
 }
 
