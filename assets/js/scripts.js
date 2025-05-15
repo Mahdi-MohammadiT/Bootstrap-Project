@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Section 9 Animation
+// Section 8 Animation
 document.addEventListener('DOMContentLoaded', () => {
   const titleSection = document.querySelector('#section-8 .section-2-title');
   const title = document.querySelector('#section-8 .section-2-title h1');
@@ -477,10 +477,123 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     },
     {
-      threshold: 0.5 // اجرا وقتی 20٪ از سکشن قابل مشاهده باشد
+      threshold: 0.2 // اجرا وقتی 20٪ از سکشن قابل مشاهده باشد
     }
   );
 
   // مشاهده سکشن
   observer.observe(document.querySelector('#section-8'));
+});
+
+// Section 9 Animation 
+document.addEventListener('DOMContentLoaded', () => {
+  const title = document.querySelector('#section-9 h3');
+  const button = document.querySelector('#section-9 .our-latest-work button');
+
+  // ایجاد IntersectionObserver
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // انیمیشن برای عنوان
+          setTimeout(() => {
+            title.classList.add('reveal');
+          }, 100);
+
+          // انیمیشن برای دکمه
+          setTimeout(() => {
+            button.classList.add('reveal');
+          }, 300); // تأخیر 300ms برای دکمه
+
+          // متوقف کردن مشاهده پس از اجرا
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.4 
+    }
+  );
+
+  // مشاهده سکشن
+  observer.observe(document.querySelector('#section-9'));
+});
+
+// Section 10 Animation
+document.addEventListener('DOMContentLoaded', () => {
+  const titleSection = document.querySelector('#section-10 .section-2-title');
+  const title = document.querySelector('#section-10 .section-2-title h1');
+  const subtitle = document.querySelector('#section-10 .section-2-title span');
+  const filterButtons = document.querySelectorAll('#section-10 .recent-projects-btn button');
+  const projectItems = document.querySelectorAll('#section-10 .project-items');
+
+  // تابع فیلتر کردن آیتم‌ها
+  const filterProjects = (category) => {
+    projectItems.forEach(item => {
+      const itemCategory = item.dataset.category;
+      if (category === 'all' || itemCategory === category) {
+        item.style.display = 'block';
+        item.classList.remove('reveal'); // بازنشانی انیمیشن
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    // انیمیشن سریع‌تر برای آیتم‌های نمایش‌داده‌شده
+    const visibleItems = document.querySelectorAll('#section-10 .project-items[style="display: block;"]');
+    visibleItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('reveal');
+      }, 100 + index * 200);
+    });
+  };
+
+  // مدیریت کلیک روی دکمه‌های فیلتر
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('sec9-btn-active'));
+      button.classList.add('sec9-btn-active');
+      const category = button.textContent.toLowerCase().trim();
+      filterProjects(category);
+    });
+  });
+
+  // ایجاد IntersectionObserver
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // انیمیشن برای عنوان و زیرعنوان
+          setTimeout(() => {
+            titleSection.classList.add('reveal');
+            title.classList.add('reveal');
+            subtitle.classList.add('reveal');
+          }, 100);
+
+          // انیمیشن برای دکمه‌های فیلتر
+          filterButtons.forEach((button, index) => {
+            setTimeout(() => {
+              button.classList.add('reveal');
+            }, 300 + index * 100);
+          });
+
+          filterProjects('all');
+
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    }
+  );
+
+  // مشاهده سکشن
+  observer.observe(document.querySelector('#section-10'));
+
+  projectItems.forEach(item => {
+    item.classList.remove('reveal');
+    item.style.display = 'none'; // مخفی تا رسیدن به ویوپورت
+  });
 });

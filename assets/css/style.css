@@ -1084,9 +1084,94 @@ nav ul li:hover #desktop-menu {
   color: black;
 }
 
+#section-9 h3,
+#section-9 .our-latest-work button {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+#section-9 h3.reveal,
+#section-9 .our-latest-work button.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* End Section 9 */
 
 /* Start Section 10 */
+/* .recent-projects-btn button {
+  border: 1px solid transparent;
+  background-color: white;
+  color: #17191b;
+  font-size: 0.8rem;
+}
+
+.sec9-btn-active {
+  border: 1px solid #17191b !important;
+  border-radius: 4px;
+}
+
+.sec9-overlay-item {
+  opacity: 0.85;
+  background-color: black;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+
+.sec9-overlay-item h4,
+.sec9-overlay-item p {
+  z-index: 3;
+  color: #fff;
+  opacity: 1 !important;
+}
+
+.overlay {
+  opacity: 0.85;
+}
+
+.sec9-overlay-item p {
+  font-size: 0.9rem;
+}
+
+#section-10 .section-2-title,
+#section-10 .section-2-title h1,
+#section-10 .section-2-title span,
+#section-10 .recent-projects-btn button,
+#section-10 .project-items {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+#section-10 .section-2-title.reveal,
+#section-10 .section-2-title h1.reveal,
+#section-10 .section-2-title span.reveal,
+#section-10 .recent-projects-btn button.reveal,
+#section-10 .project-items.reveal {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+#section-10 .section-2-title,
+#section-10 .section-2-title h1,
+#section-10 .section-2-title span,
+#section-10 .recent-projects-btn button,
+#section-10 .project-items {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+#section-10 .section-2-title.reveal,
+#section-10 .section-2-title h1.reveal,
+#section-10 .section-2-title span.reveal,
+#section-10 .recent-projects-btn button.reveal,
+#section-10 .project-items.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .recent-projects-btn button {
   border: 1px solid transparent;
   background-color: white;
@@ -1121,6 +1206,9 @@ nav ul li:hover #desktop-menu {
   font-size: 0.9rem;
 }
 
+.project-items {
+  display: none; /* مخفی بودن اولیه */
+}
 /* End Section 10 */
 
 /* Start Section 11 */
