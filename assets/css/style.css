@@ -1100,58 +1100,6 @@ nav ul li:hover #desktop-menu {
 /* End Section 9 */
 
 /* Start Section 10 */
-/* .recent-projects-btn button {
-  border: 1px solid transparent;
-  background-color: white;
-  color: #17191b;
-  font-size: 0.8rem;
-}
-
-.sec9-btn-active {
-  border: 1px solid #17191b !important;
-  border-radius: 4px;
-}
-
-.sec9-overlay-item {
-  opacity: 0.85;
-  background-color: black;
-  transform: translateY(-100%);
-  cursor: pointer;
-}
-
-.sec9-overlay-item h4,
-.sec9-overlay-item p {
-  z-index: 3;
-  color: #fff;
-  opacity: 1 !important;
-}
-
-.overlay {
-  opacity: 0.85;
-}
-
-.sec9-overlay-item p {
-  font-size: 0.9rem;
-}
-
-#section-10 .section-2-title,
-#section-10 .section-2-title h1,
-#section-10 .section-2-title span,
-#section-10 .recent-projects-btn button,
-#section-10 .project-items {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-}
-
-#section-10 .section-2-title.reveal,
-#section-10 .section-2-title h1.reveal,
-#section-10 .section-2-title span.reveal,
-#section-10 .recent-projects-btn button.reveal,
-#section-10 .project-items.reveal {
-  opacity: 1;
-  transform: translateY(0);
-} */
 
 #section-10 .section-2-title,
 #section-10 .section-2-title h1,
@@ -1207,11 +1155,27 @@ nav ul li:hover #desktop-menu {
 }
 
 .project-items {
-  display: none; /* مخفی بودن اولیه */
+  display: none;
 }
 /* End Section 10 */
 
 /* Start Section 11 */
+
+#section-11 .sec11-text h4,
+#section-11 .sec11-text p,
+#section-11 .more-works button {
+  opacity: 0;
+  transform: translateY(20px); /* حرکت از پایین به بالا */
+  transition: all 0.5s ease;
+}
+
+#section-11 .sec11-text h4.reveal,
+#section-11 .sec11-text p.reveal,
+#section-11 .more-works button.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .sec11-text p {
   font-size: 0.9rem;
   opacity: 0.8;
@@ -1238,6 +1202,70 @@ nav ul li:hover #desktop-menu {
 /* End Section 11 */
 
 /* Start Section 12 */
+/* .person-name {
+  color: #17191b;
+  font-size: 0.9rem;
+}
+
+.person-name:hover {
+  color: #17191b;
+  text-decoration: underline !important;
+}
+
+.person-skills {
+  color: #17191b;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.person-overlay {
+  opacity: 0;
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #111;
+}
+
+.person-skill-logo {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.person-cont:hover .person-overlay {
+  opacity: 0.65;
+}
+
+.person-cont:hover .person-skill-logo {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+} */
+
+#section-12 .section-2-title,
+#section-12 .section-2-title h1,
+#section-12 .section-2-title span,
+#section-12 .col-6.col-md-3 {
+  opacity: 0;
+  transform: translateY(20px); /* حرکت از پایین به بالا */
+  transition: all 0.5s ease;
+}
+
+#section-12 .section-2-title.reveal,
+#section-12 .section-2-title h1.reveal,
+#section-12 .section-2-title span.reveal,
+#section-12 .col-6.col-md-3.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .person-name {
   color: #17191b;
   font-size: 0.9rem;
@@ -1290,13 +1318,11 @@ nav ul li:hover #desktop-menu {
 /* Start Footer */
 footer {
   background-color: #17191b;
+  margin-top: 80px;
 }
 
 .footer-content {
   font-size: 0.9rem;
 }
+
 /* End Footer */
-
-/* GSAP */
-
-
